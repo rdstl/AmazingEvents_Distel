@@ -106,6 +106,21 @@
 .botoncab:hover{
   background-color: rgb(195, 5, 94);
 }
-/* .botoncab:active{
-  background-color: rgb(217, 3, 104);
-} */
+
+.tceldas{
+  border: 1px solid black;
+  height: 35px;
+  line-height: 35px;
+}
+
+.celda
+{
+  font-size: 18px;
+  margin: 0;
+  border: 1px solid rgb(128, 128, 128); 
+  height: 35px;
+  line-height: 35px;
+}
+.gceldas{
+  border: 1px solid black; 
+}
