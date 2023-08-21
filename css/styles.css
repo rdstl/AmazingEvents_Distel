@@ -108,6 +108,7 @@
 }
 
 .tceldas{
+  background-color: rgb(217, 3, 104);
   border: 1px solid black;
   height: 35px;
   line-height: 35px;
@@ -123,4 +124,9 @@
 }
 .gceldas{
   border: 1px solid black; 
+}
+
+#statcont{
+  width: 100%;
+
 }
