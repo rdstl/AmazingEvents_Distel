@@ -1,6 +1,7 @@
 * 
 {
   font-family: "Arial Narrow", sans-serif;
+  box-sizing: border-box;
 }
 
 
@@ -56,13 +57,19 @@
   line-height: 35px;
   background-color: rgb(190, 182, 182);
  }
-  
+
+/* este es para que no aparezca el scroll horizontal*/ 
+#content{
+  width: 99%;
+}
  
  footer {
   background-color: rgb(190, 182, 182);
   border-radius: 5px;
   height: 50px;
-  line-height: 50px;
+  line-height: 45px;
+  padding: 5px;
+  margin: 5px;
  }
 
  footer img{
@@ -75,6 +82,16 @@
   font-size: 16px;
   text-align: right;
  }
+
+
+/* #footer{
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  bottom: 0px;
+
+} */
+
 
  #alinea1, #alinea2, #alinea3, #alinea4{
   color: rgb(217, 3, 104);
@@ -94,9 +111,6 @@
 .detalle:active{
   background-color: rgb(217, 3, 104);
 }
-
-
-
 
 .botoncab {
   background-color: rgb(217, 3, 104);
@@ -129,4 +143,19 @@
 #statcont{
   width: 100%;
 
+}
+
+
+html, body {
+  height:100%;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+}
+
+main{
+
+  flex-grow: 1;
 }
