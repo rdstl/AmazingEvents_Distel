@@ -1,8 +1,10 @@
 
 function makeCards(events, idContenedor)
 {
+
    
   for(let event of data.events)
+  
   {         
 
       sendCard(event.image, event.name, event.description, event.date, event.price, idContenedor);

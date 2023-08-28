@@ -16,7 +16,7 @@
 
   <body>
 
-    <div class="container-flex m-4">
+    <div class="container-flex m-4" id="container">
       
 
         <!-- header -->
@@ -51,44 +51,30 @@
         </div>
       </div>
 
-     <div class="row m-5 p-4">
-      <form>
-        <div class="mb-3">
-          <label for="userName" class="form-label">Name:</label>
-          <input type="text" class="form-control border" id="userName">
+      <main >
+        <div class="row m-5 p-4" >
+          <form>
+            <div class="mb-3">
+              <label for="userName" class="form-label">Name:</label>
+              <input type="text" class="form-control border" id="userName">
+            </div>
+
+            <div class="mb-3">
+              <label for="userEmail" class="form-label">Email:</label>
+              <input type="email" class="form-control" id="userEmail">
+            </div>  
+            
+            <div>
+              <div class="mb-3">
+                <label for="userMessage">Message:</label>
+                <textarea class="form-control border" id="userMessage" name="userMessage" rows="4" cols="60"></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-danger botoncab ">Submit</button>
+          </form>
         </div>
-
-
-
-        <div class="mb-3">
-          <label for="userEmail" class="form-label">Email:</label>
-          <input type="email" class="form-control" id="userEmail">
-        </div>  
-        
-        <div>
-          <div class="mb-3">
-            <label for="userMessage">Message:</label>
-            <textarea class="form-control border" id="userMessage" name="userMessage" rows="4" cols="60"></textarea>
-          </div>
-        </div>
-
-        <button type="submit" class="btn btn-danger botoncab ">Submit</button>
-      </form>
-
-
-
-
-
-
-
-
-
-
-
-
-     </div>
-
-     
+      </main>
         
 
         

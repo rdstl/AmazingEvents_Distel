@@ -140,22 +140,24 @@
   border: 1px solid black; 
 }
 
-#statcont{
+#statcont
+{
   width: 100%;
-
 }
 
 
-html, body {
+html, body, #container 
+{
   height:100%;
 }
 
-body{
+body, #container 
+{
   display: flex;
   flex-direction: column;
 }
 
-main{
-
+main
+{
   flex-grow: 1;
 }

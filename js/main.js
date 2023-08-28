@@ -1,3 +1,4 @@
+
 function sendCard(cardImage, cardName, cardDescription, cardDate, cardPrice, cardIdContainer ){
          
    let card = `
