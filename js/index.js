@@ -1,5 +1,68 @@
 
-function makeCards(events, idContenedor)
+
+function makeFilters(idfilter)
+{
+
+const categoriasUnicas = data.events.reduce((categorias, evento) => 
+{
+
+  if (!categorias.includes(evento.category)) 
+  {
+    categorias.push(evento.category);
+    sendFilter(evento.category, evento._id, idfilter); 
+  }
+  return categorias;
+}, []);
+}
+
+makeFilters('filterContainer'); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+function makeFilters(idfilter)
+{
+  
+  for (let event of data.events) 
+   {
+  
+      sendFilter(event.category, event._id, idfilter); 
+   
+  }
+ 
+ }
+
+makeFilters('filterContainer'); */
+
+
+
+
+
+
+/*                        Cartas 
+
+
+*/
+function makeCards(idContenedor)
 {
 
    
@@ -12,7 +75,7 @@ function makeCards(events, idContenedor)
   }
 };
 
-makeCards(data, 'eventsContainer');
+makeCards('eventsContainer');
 
 
 

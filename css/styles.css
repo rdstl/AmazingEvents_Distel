@@ -102,6 +102,7 @@
 
 .detalle {
   background-color: rgb(217, 3, 104);
+
 }
 
 .detalle:hover{
@@ -161,3 +162,26 @@ main
 {
   flex-grow: 1;
 }
+
+.alto 
+{
+  height: 450px;
+
+}
+.altoimg
+{
+  height: 180px;
+}
+
+.card-body
+{
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(250, 249, 237);
+}
+.card-title{
+  color: rgb(217, 3, 104);
+  font-size: 30px;
+  text-align: center;
+}
+

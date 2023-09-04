@@ -1,5 +1,5 @@
 
-function makeCards(events, idContenedor)
+function makeCards(idContenedor)
 {
 
    let fecharef = data.currentDate
@@ -13,4 +13,4 @@ function makeCards(events, idContenedor)
    }
 };
 
-makeCards(data, 'upcomingEventsContainer');
+makeCards('upcomingEventsContainer');
