@@ -185,3 +185,11 @@ main
   text-align: center;
 }
 
+.detail-title{
+  color: rgb(217, 3, 104);
+  font-size: 40px;
+  text-align: left;
+}
+.detail-description{
+  font-size: 23px;
+}

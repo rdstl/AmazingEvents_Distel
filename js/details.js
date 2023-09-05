@@ -23,14 +23,14 @@ function makeDetail(detailImg, detailname, detaildescription, detaildate, detail
     let detail = 
     `
     <div class="col-12 col-sm-6 col-md-6">
-    <img src="${detailImg}" class="col-12 col-md-6" alt="brand">
+    <img src="${detailImg}" class="col-12 col-sd-6" col-md-6" alt="brand">
         </div>
 
         <div class="col-12 col-sm-6 col-md-6">
           
           <div class="row">
-            <h3>${detailname}</h3>
-            <p>${detaildescription}</p>
+            <h3 class="detail-title">${detailname}</h3>
+            <p class="detail-description">${detaildescription}</p>
             <p>Date: ${detaildate}</p>
             <p>Category: ${detailcategory}</p>
             <p>Place: ${detailplace}</p>
