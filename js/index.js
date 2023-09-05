@@ -1,24 +1,18 @@
-
-
 function makeFilters(idfilter)
 {
-
-const categoriasUnicas = data.events.reduce((categorias, evento) => 
-{
-
-  if (!categorias.includes(evento.category)) 
+  const uniquecategories = data.events.reduce((categories, event) => 
   {
-    categorias.push(evento.category);
-    sendFilter(evento.category, evento._id, idfilter); 
-  }
-  return categorias;
-}, []);
+    if (!categories.includes(event.category)) 
+    {
+      categories.push(event.category);
+      
+        sendFilter(event.category, event._id, idfilter); 
+
+    }
+    return categories;
+  }, []);
 }
-
 makeFilters('filterContainer'); 
-
-
-
 
 
 
@@ -64,14 +58,9 @@ makeFilters('filterContainer'); */
 */
 function makeCards(idContenedor)
 {
-
-   
   for(let event of data.events)
-  
   {         
-
-      sendCard(event.image, event.name, event.description, event.date, event.price, idContenedor);
-  
+      sendCard(event.image, event.name, event.description, event.date, event.price, event._id, idContenedor);
   }
 };
 
