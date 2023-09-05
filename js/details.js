@@ -1,9 +1,7 @@
 let params = new URLSearchParams(window.location.search)
 let id = params.get("id");
 
-
 searchEvent(id);
-
 
 function searchEvent(id) 
 {
@@ -33,11 +31,11 @@ function makeDetail(detailImg, detailname, detaildescription, detaildate, detail
           <div class="row">
             <h3>${detailname}</h3>
             <p>${detaildescription}</p>
-            <p>${detaildate}</p>
-            <p>${detailcategory}</p>
-            <p>${detailplace}</p>
-            <p>${detailcapacity}</p>
-            <p>$ ${detailprice}.-</p>
+            <p>Date: ${detaildate}</p>
+            <p>Category: ${detailcategory}</p>
+            <p>Place: ${detailplace}</p>
+            <p>Capacity: ${detailcapacity}</p>
+            <p>Price: $ ${detailprice}.-</p>
 
           </div> `;
     
