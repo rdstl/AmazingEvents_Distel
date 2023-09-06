@@ -19,7 +19,7 @@ makeFilters('filterContainer');
 
 
 */
-function makeCards(datax , idContenedor)
+function makeCards(datax, idContenedor)
 {
 
   document.getElementById(idContenedor).innerHTML = "";  
@@ -33,7 +33,7 @@ makeCards(data.events, 'eventsContainer');
 
 
 
-/*                                                                           filters */
+/*                                                             filters */
 
 
 const filterContainer = document.getElementById('filterContainer')
