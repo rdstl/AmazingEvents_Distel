@@ -3,30 +3,13 @@
 { let filter = `
 
 <div class="form-check col-5 col-sm-5 col-md-5 col-lg">
-   <input type="checkbox" class="form-check-input-border" id="${filterId}">
+   <input type="checkbox" class="form-check-input ${filterCategory}" " id="${filterId}" value="${filterCategory}">
    <label class="form-check-label" for="${filterId}">${filterCategory}</label>
 </div>`;
 
     document.getElementById(filterIdContainer).innerHTML += filter;
 
 } 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 function sendCard(cardImage, cardName, cardDescription, cardDate, cardPrice, cardId, cardIdContainer ){
@@ -46,7 +29,6 @@ function sendCard(cardImage, cardName, cardDescription, cardDate, cardPrice, car
    document.getElementById(cardIdContainer).innerHTML += card;
 }
 
-/* <p class="card-text">Date: ${cardDate}</p> */
 
 
 
