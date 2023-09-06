@@ -30,5 +30,33 @@ function sendCard(cardImage, cardName, cardDescription, cardDate, cardPrice, car
 }
 
 
+/*                                                   functions         */
+function dateFilter(ordenamiento, hup)
+{
+   if(hup==0)
+   {
+      let arre = ordenamiento;
+      return arre;
+   }
+}
 
+
+function categoryFilter(arreglo)
+{
+    let checkboxes = Array.from(document.getElementsByClassName("form-check-input"));
+    let checkedboxes = checkboxes.filter(check => check.checked);
+    let valores = checkedboxes.map(chAz => chAz.value);
+    if(valores.length == 0)
+    {
+        return arreglo
+    }
+    let arre2 = arreglo.filter(categ => valores.includes(categ.category));  
+    return arre2;
+}
+
+function nameFilter(arreglo, texto)
+{
+   let arre3 = arreglo.filter(elemento => elemento.name.toLowerCase().includes(texto.trim().toLowerCase()) || elemento.description.toLowerCase().includes(texto.trim().toLowerCase()))
+  return arre3;
+}
 
