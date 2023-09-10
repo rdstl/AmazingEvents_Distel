@@ -1,6 +1,34 @@
-function makeFilters(idfilter)
+const apiUrl = 'https://mindhub-xj03.onrender.com/api/amazing';
+let data = null
+getApi();
+
+function getApi(){
+  fetch(apiUrl)
+  .then(response => response.json())
+  .then(dataApi =>{
+    data=dataApi
+    makeFilters(data,'filterContainer');   
+    makeCards(data.events, 'eventsContainer'); 
+    filterContainer.addEventListener("change", filtro);
+    texto.addEventListener("input",filtro)
+    
+    function filtro()
+    {
+      let byDate = dateFilter(data.events, 0); 
+      let byCategory = categoryFilter(byDate);
+      let byName = nameFilter(byCategory, texto.value);
+       
+        makeCards(byName, 'eventsContainer'); 
+     
+    }
+  }) 
+  .catch(error => console.log(error))
+}
+
+
+function makeFilters(datax, idfilter)
 {
-  const uniquecategories = data.events.reduce((categories, event) => 
+  const uniquecategories = datax.events.reduce((categories, event) => 
   {
     if (!categories.includes(event.category)) 
     {
@@ -12,7 +40,6 @@ function makeFilters(idfilter)
     return categories;
   }, []);
 }
-makeFilters('filterContainer'); 
 
 
 /*                        Cartas 
@@ -31,25 +58,9 @@ function makeCards(datax, idContenedor)
 
 
 
-
-makeCards(data.events, 'eventsContainer'); 
-
-
 /*                                                         filters */
 const filterContainer = document.getElementById('filterContainer')
 const texto = document.getElementById('texto');
 
-filterContainer.addEventListener("change", filtro);
-texto.addEventListener("input",filtro)
-
-function filtro()
-{
-  let byDate = dateFilter(data.events, 0); 
-  let byCategory = categoryFilter(byDate);
-  let byName = nameFilter(byCategory, texto.value);
-   
-  makeCards(byName, 'eventsContainer'); 
- 
-}
 
 

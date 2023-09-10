@@ -57,6 +57,7 @@ function categoryFilter(arreglo)
 function nameFilter(arreglo, texto)
 {
    let arre3 = arreglo.filter(elemento => elemento.name.toLowerCase().includes(texto.trim().toLowerCase()) || elemento.description.toLowerCase().includes(texto.trim().toLowerCase()))
+
   return arre3;
 }
 
