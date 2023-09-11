@@ -35,6 +35,7 @@
       </div>
       
       <!-- Subheader -->
+
       <div class="row">
         <div class="col-12">
           <div id="subheader" class="row gap-1">
@@ -47,164 +48,58 @@
           </div>
         </div>
       </div>
+
       <main>
-        <div class="constainer m-1" id="container">
-            <div class="row text-white tceldas">
-              <h3>Events Statistics</h3>
-            </div>
-
-            <div class="row mb-3">
-
-              <div class="col-12 col-md-4">
-                <div class="row">
-                  <p class="col celda">Events with highest % of assistance</p>
-                </div>
-                <div class="row">
-                  <p class="col celda"></p>
-                </div>
-              </div>
-
-              <div class="col-12 col-md-4">
-                  <div class="row">
-                    <p class="col celda">Events with lowest % of assistance</p>
-                  </div>
-                  <div class="row">
-                    <p class="col celda"></p>
-                  </div>
-              </div>
-
-              <div class="col-12 col-md-4">
-                  <div class="row">
-                    <p class="col celda">Events with largest capacity</p>
-                  </div>
-                  <div class="row">
-                    <p class="col celda"></p>
-                  </div>
-              </div>
-
-            </div> 
-
-
-
-          <!-- Upcoming -->
-            <div class="row text-white tceldas">
-              <h3>Upcoming Events Statistics by Category</h3>
-            </div>
       
-            <div class="row mb-3">
-      
-              <div class="col-12 col-md-4">
-                <div class="row">
-                  <p class="col celda">Categories</p>
-                </div>
-                <div class="row">
-                  <p class="col celda">Category 1</p>
-                </div>
-                <div class="row">
-                  <p class="col celda">Category 2</p>
-                </div>
-                <div class="row">
-                  <p class="col celda">Category 3</p>
-                </div>
-                <div class="row">
-                  <p class="col celda">Category 4</p>
-                </div>
-                <div class="row">
-                  <p class="col celda">Category 5</p>
-                </div>
-              </div>
-      
-              <div class="col-12 col-md-4">
-                <div class="row">
-                  <p class="col celda">Revenues</p>
-                </div>
-                <div class="row">
-                  <p class="col celda">Revenues Category 1</p>
-                </div>
-                <div class="row">
-                  <p class="col celda">Revenues Category 2</p>
-                </div>
-                <div class="row">
-                  <p class="col celda">Revenues Category 3</p>
-                </div>
-                <div class="row">
-                  <p class="col celda">Revenues Category 4</p>
-                </div>
-                <div class="row">
-                  <p class="col celda">Revenues Category 5</p>
-                </div>
+          <table class="table table-bordered">
+            <h2 class="bg-secondary text-white">Events Statistics</h2>
+            <thead>
+                <th scope="col" class="col-9 bg-secondary text-white titles">Events with Highest Assistance</th>
+                <th scope="col" class="bg-secondary text-white titles">% of Assistance</th>
+            </thead>
+            <tbody id="eventsWithHighestAssistance"></tbody>
+          </table>
+       
+        <table class="table table-bordered">
+          <thead>
+              <th scope="col" class="col-9 bg-secondary text-white titles">Events with Lowest Assistance</th>
+              <th scope="col" class="bg-secondary text-white titles">% of Assistance</th>
+          </thead>
+          <tbody id="eventsWithlowestAssistance"></tbody>
+        </table>
 
-              </div>
-                    
-              <div class="col-12 col-md-4">
-                <div class="row">
-                  <p class="col celda">Percentage of assitance</p>
-                </div>
-                <div class="row">
-                  <p class="col celda">% Assistence Category 1</p>
-                </div>
-                <div class="row">
-                  <p class="col celda">% Assistence Category 2</p>
-                </div>
-                <div class="row">
-                  <p class="col celda">% Assistence Category 3</p>
-                </div>
-                <div class="row">
-                  <p class="col celda">% Assistence Category 4</p>
-                </div>
-                <div class="row">
-                  <p class="col celda">% Assistence Category 5</p>
-                </div>
-            
+        <table class="table table-bordered">
+          <thead>
+              <th scope="col" class="col-9 bg-secondary text-white titles">Events with Larger Capacity</th>
+              <th scope="col" class="bg-secondary text-white titles">Capacity</th>
+          </thead>
+          <tbody id="eventsWithLargerCapacity"></tbody>
+        </table>
 
 
-              </div>
-            </div>  
-            
-          
-            <div class="row text-white tceldas">
-              <h3>Past Events Statistics by Category</h3>
-            </div>
-      
-            <div class="row mb-3">
-      
-              <div class="col-12 col-md-4">
-                <div class="row">
-                  <p class="col celda">Categories</p>
-                </div>
-                <div class="row">
-                  <p class="col celda"></p>
-                </div>
-                <div class="row">
-                  <p class="col celda"></p>
-                </div>
-              </div>
-      
-              <div class="col-12 col-md-4">
-                  <div class="row">
-                    <p class="col celda">Revenues</p>
-                  </div>
-                  <div class="row">
-                    <p class="col celda"></p>
-                  </div>
-                  <div class="row">
-                    <p class="col celda"></p>
-                  </div>
-              </div>
-      
-              <div class="col-12 col-md-4">
-                  <div class="row">
-                    <p class="col celda">Percentage of assitance</p>
-                  </div>
-                  <div class="row">
-                    <p class="col celda"></p>
-                  </div>
-                  <div class="row">
-                    <p class="col celda"></p>
-                  </div>
-              </div>
-            </div>
-          </div>
+        <table class="table table-bordered">
+        <h2 class="bg-secondary text-white">Upcoming Events Statistics by Category</h2>
+          <thead>
+              <th scope="col" class="col-4 bg-secondary text-white">Category</th>
+              <th scope="col" class="col-4 bg-secondary text-white">Revenues</th>
+              <th scope="col" class="col-4 bg-secondary text-white">% of Assistance</th>
+            </tr>
+          </thead>
+          <tbody id="upByCategory"></tbody>
+        </table>
+
+        <table class="table table-bordered">
+          <h2 class="bg-secondary text-white ">Past Events Statistics by Category</h2>
+          <thead>
+              <th scope="col" class="col-4 bg-secondary text-white">Category</th>
+              <th scope="col" class="col-4 bg-secondary text-white">Revenues</th>
+              <th scope="col" class="col-4 bg-secondary text-white">% of Assistance</th>
+            </tr>
+          </thead>
+          <tbody id="pastByCategory"></tbody>
+        </table>
+
+
       </main>
        
  <!-- Pie Pagina -->
@@ -220,6 +115,7 @@
     </footer> 
     
     </div>
+    <script src="./js/main.js"></script>
     <script src="./js/stats.js"></script>
 
     <script

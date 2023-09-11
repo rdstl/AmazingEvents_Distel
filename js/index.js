@@ -42,9 +42,7 @@ function makeFilters(datax, idfilter)
 }
 
 
-/*                        Cartas 
-
-
+/*                        Cards 
 */
 function makeCards(datax, idContenedor)
 {

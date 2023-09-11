@@ -193,3 +193,38 @@ main
 .detail-description{
   font-size: 23px;
 }
+
+.contacts
+{
+   background-color: rgb(250, 249, 237);
+}
+
+.stats{
+  background-color: rgb(255, 136, 0);
+}
+
+
+.titles 
+{
+  font-size: 18px;
+ /*  width: 100%; */
+  /*background-color: blue;
+  color: beige; */
+}
+
+#lupita{
+  width: 35px;
+  height: 28px;
+  border: 1px solid black;
+}
+
+.fondo
+{
+  background-color: rgb(250, 249, 237);
+  border: 2px solid rgb(228, 225, 225);
+  border-radius: 7px;
+}
+
+#imgdetails{
+  border: none;
+}

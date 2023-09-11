@@ -8,10 +8,12 @@ function getApi(){
   .then(response => response.json())
   .then(dataApi =>{
     data=dataApi
-    //console.table(data.events) 
+
    highestAssistance(data); 
    lowestAssistance(data); 
-   largestAssistance(data); 
+   largerAssistance(data);  
+  
+  
    upcomingByCategory(data);
    pastByCategory(data);
   }) 
@@ -22,27 +24,59 @@ function getApi(){
 //                                         table 1
 function highestAssistance(datax)
 {
-   let ha = datax.events.sort((a,b) => b.assistance/b.capacity-a.assistance/a.capacity).slice(0,5); 
-   for(elemento of ha)
+   let highestA = datax.events.sort((a,b) => b.assistance/b.capacity-a.assistance/a.capacity).slice(0,5); 
+   for(elemento of highestA)
    {
-      console.log(elemento.name + "   " + ((elemento.assistance)*100/(elemento.capacity)).toFixed(2) + "%" );  
+     // console.log(elemento.name + "   " + ((elemento.assistance)*100/(elemento.capacity)).toFixed(2) + "%" );  
+
+    rowTable1 = `
+      <tr>
+         <th scope="row">${elemento.name}</th> 
+         <td>${((elemento.assistance)*100/(elemento.capacity)).toFixed(2) + "%"}</td>
+      </tr>   `; 
+         
+         document.getElementById("eventsWithHighestAssistance").innerHTML += rowTable1;   
+
    }
 }
+
+
+
 function lowestAssistance(datax)
 {
-   let ha = datax.events.sort((a,b) => a.assistance/a.capacity-b.assistance/b.capacity).slice(0,5);
-   for(elemento of ha)
+   let lowestA = datax.events.sort((a,b) => a.assistance/a.capacity-b.assistance/b.capacity).slice(0,5);
+   for(elemento of lowestA)
    {
-      console.log(elemento.name + "   " + ((elemento.assistance)*100/(elemento.capacity)).toFixed(2) + "%" );  
+      //console.log(elemento.name + "   " + ((elemento.assistance)*100/(elemento.capacity)).toFixed(2) + "%" ); 
+      rowTable1 = `
+      <tr>
+         <th scope="row">${elemento.name}</th> 
+         <td >${((elemento.assistance)*100/(elemento.capacity)).toFixed(2) + "%"}</td>
+         
+      </tr>   `; 
+         
+         document.getElementById("eventsWithlowestAssistance").innerHTML += rowTable1; 
+         
+
+         
    }
 }
-function largestAssistance(datax)
+function largerAssistance(datax)
 {
-   let ha = datax.events.sort((a,b) => b.capacity-a.capacity).slice(0,5);
-   for(elemento of ha)
+   let largertA = datax.events.sort((a,b) => b.capacity-a.capacity).slice(0,5);
+   for(elemento of largertA)
    {
-      console.log(elemento.name + "   " + elemento.capacity.toLocaleString());  
+      //console.log(elemento.name + "   " + elemento.capacity.toLocaleString());  
       
+      rowTable1 = `
+         <tr>
+            <th scope="row">${elemento.name}</th> 
+            <td >${elemento.capacity.toLocaleString()}</td>
+            
+         </tr>   `; 
+            
+            document.getElementById("eventsWithLargerCapacity").innerHTML += rowTable1; 
+
    }
    
 }
@@ -87,10 +121,27 @@ function upcomingByCategory(datax)
    })
 
 
-   console.table((table2.sort((a,b) => b.revenues-a.revenues)).slice(0,3));
+  /*   console.table((table2.sort((a,b) => b.revenues-a.revenues)).slice(0,3));   */
+   let rowTable2;
+   result2 = table2.sort((a,b) => b.revenues-a.revenues).slice(0,5)
+   for (elemento of result2) 
+   {
+      let rowTable2 = ``;
+      //console.log(elemento.category + " " + elemento.revenues.toLocaleString() + " " + elemento.assistancePercentage.toFixed(2))
 
-/*    console.table(categories); */
+      rowTable2 = `
+      <tr>
+         <th scope="row">${elemento.category}</th> 
+         <td >${elemento.revenues.toLocaleString()}</td>
+         <td >${elemento.assistancePercentage.toFixed(2)}%</td>
+      </tr>   `; 
+         
+         document.getElementById("upByCategory").innerHTML += rowTable2;  
+   }
 }
+
+
+
 
 
 
@@ -130,8 +181,32 @@ function pastByCategory(datax)
  
    })
 
+/* 
+   console.table((table3.sort((a,b) => b.revenues-a.revenues)).slice(0,3)); */
 
-   console.table((table3.sort((a,b) => b.revenues-a.revenues)).slice(0,3));
+   result3 = table3.sort((a,b) => b.revenues-a.revenues).slice(0,5)
+   for (elemento of result3) 
+   {
+      let rowTable2 = ``
+      //console.log(elemento.category + " " + elemento.revenues.toLocaleString() + " " + elemento.assistancePercentage.toFixed(2))
+   
+       let rowTable3 = `
+      <tr> 
+      <th scope="row">${elemento.category}</th>
+         <td>${elemento.revenues.toLocaleString()}</td>
+         <td>${elemento.assistancePercentage.toFixed(2)}%</td>
+      </tr>`; 
+
+
+     // console.log(rowTable3);  
+     document.getElementById("pastByCategory").innerHTML += rowTable3;  
+
+    
+   
+   }
+
+
+
 
 
 }
